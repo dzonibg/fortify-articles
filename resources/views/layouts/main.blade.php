@@ -2,6 +2,7 @@
 <div>
     <ul class="menu">
         <li><a href="/">Main</a></li>
+        <li><a href="/articles">Articles</a></li>
         @guest()
             <li class="auth"><a href="/login">Login</a></li>
             <li class="auth"><a href="/register">Register</a></li>
