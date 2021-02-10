@@ -8,7 +8,7 @@
             @csrf
         <input class="article-input" type="text" name="title" placeholder="New Article">
         <br>
-        <input name="body" class="article-input" style="width: 100%; height: 30em; background-color: burlywood">
+            <textarea name="body" class="article-input" style="width: 100%; height: 30em; background-color: burlywood"></textarea>
             <br>
             <div class="right">
         <button type="submit" class="btn article-submit">Post the article</button>
