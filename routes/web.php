@@ -18,3 +18,6 @@ Route::get('/', function () {
 });
 
 Route::view('/update', 'auth.update');
+
+
+Route::view("/articles", "articles.index");
