@@ -91,6 +91,7 @@ class ArticleController extends Controller
      */
     public function destroy(Article $article)
     {
-        $this->destroy();
+        $article->delete();
+        return redirect("/articles");
     }
 }
