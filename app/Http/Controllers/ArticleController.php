@@ -26,7 +26,7 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        //
+        return view("articles.create");
     }
 
     /**
@@ -37,7 +37,16 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user = \Auth::user();
+        $user->article()->create($this->validated());
+        return redirect("/articles");
+    }
+
+    public function validated() {
+        return \request()->validate([
+            'title' => 'required',
+            'body' => 'required',
+        ]);
     }
 
     /**

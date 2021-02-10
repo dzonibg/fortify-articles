@@ -22,4 +22,6 @@ Route::view('/update', 'auth.update');
 
 
 Route::get("/articles", [ArticleController::class, "index"]);
+Route::get("/article/create", [ArticleController::class, "create"]);
 Route::get("/article/{article}", [ArticleController::class, "show"]);
+Route::post("/article", [ArticleController::class, "store"]);

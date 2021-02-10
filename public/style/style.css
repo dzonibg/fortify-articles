@@ -97,6 +97,10 @@ p {
     text-align: center;
 }
 
+.right {
+    text-align: right;
+}
+
 .flex-container {
     display: flex;
     flex-direction: row;
@@ -108,4 +112,22 @@ p {
     background: cornsilk;
     margin: 10px;
     padding: 10px;
+}
+
+.article-input {
+    width: 30%;
+    border-radius: 0px;
+    border-color: burlywood;
+    background-color: burlywood;
+}
+
+.article-submit {
+    margin: 5px;
+    padding: 5px;
+    background-color: blanchedalmond;
+    color: #2d3748;
+}
+
+.article-submit:hover {
+    background-color: antiquewhite;
 }

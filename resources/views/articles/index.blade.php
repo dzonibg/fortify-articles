@@ -15,7 +15,7 @@
     </div>
 
     @auth()
-        <p> Write a new article.</p>
+        <p><a href="/article/create"> Write a new article.</a></p>
     @endauth
 </div>
 @endsection
