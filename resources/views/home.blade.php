@@ -9,7 +9,8 @@
 
         @auth()
             <div class="card">
-                <p>You are logged in as {{ auth()->user()->name }} </p>
+                <p>You are logged in as {{ auth()->user()->name }}. </p>
+                <p>You have written {{ auth()->user()->article()->count() }} articles.</p>
             </div>
         @endauth
     </div>

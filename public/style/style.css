@@ -96,3 +96,16 @@ p {
 .center {
     text-align: center;
 }
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.article {
+    background: cornsilk;
+    margin: 10px;
+    padding: 10px;
+}

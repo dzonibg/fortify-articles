@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ArticleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,4 +21,5 @@ Route::get('/', function () {
 Route::view('/update', 'auth.update');
 
 
-Route::view("/articles", "articles.index");
+Route::get("/articles", [ArticleController::class, "index"]);
+Route::get("/article/{article}", [ArticleController::class, "show"]);
