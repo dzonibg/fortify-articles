@@ -22,6 +22,6 @@ Route::view('/update', 'auth.update');
 
 
 Route::get("/articles", [ArticleController::class, "index"]);
-Route::get("/article/create", [ArticleController::class, "create"]);
+Route::get("/article/create", [ArticleController::class, "create"])->middleware("auth");
 Route::get("/article/{article}", [ArticleController::class, "show"]);
-Route::post("/article", [ArticleController::class, "store"]);
+Route::post("/article", [ArticleController::class, "store"])->middleware("auth");

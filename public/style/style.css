@@ -119,6 +119,8 @@ p {
     border-radius: 0px;
     border-color: burlywood;
     background-color: burlywood;
+    font-size: medium;
+    font-family: Calibri, serif;
 }
 
 .article-submit {
