@@ -58,17 +58,18 @@ input {
 
 .btn {
     height: 35px;
-    background: #094877;
-    color: #a0aec0;
+    background: #b17f49;
+    color: #2f2929;
     border: #4a5568 solid 1px;
     padding-left: 15px;
     padding-right: 15px;
     border-radius: 5px;
     font-size: medium;
+    transition: 0.3s;
 }
 
 .btn:hover {
-    background: #0c72ba;
+    background: #cdaf5e;
 }
 
 div {
@@ -132,4 +133,19 @@ p {
 
 .article-submit:hover {
     background-color: antiquewhite;
+}
+
+a {
+    color: #403d3d;
+    text-decoration: none;
+    transition: 1s;
+}
+
+a:hover {
+    color: #516881;
+}
+
+a:visited {
+    color: #516881;
+    text-underline: none;
 }

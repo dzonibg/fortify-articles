@@ -5,7 +5,7 @@
             <form method="POST" action="login">
                 <input type="text" name="email" placeholder="E-mail" autofocus required>
                 <br>
-                <input type="text" name="password" placeholder="Password" required>
+                <input type="password" name="password" placeholder="Password" required>
                 <br>
                 <button class="btn" type="submit">Login</button>
                 @csrf

@@ -25,3 +25,4 @@ Route::get("/articles", [ArticleController::class, "index"]);
 Route::get("/article/create", [ArticleController::class, "create"])->middleware("auth");
 Route::get("/article/{article}", [ArticleController::class, "show"]);
 Route::post("/article", [ArticleController::class, "store"])->middleware("auth");
+Route::delete("/article/{article}", [ArticleController::class, "destroy"]);
