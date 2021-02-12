@@ -4,7 +4,7 @@ use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\DB;
 
-class ParseContentService { //TODO Refactor!
+class ParseContentService { //TODO Refactor returns!
 
     public $content;
     public $columnNames;
