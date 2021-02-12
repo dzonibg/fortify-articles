@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use App\Services\ParseContentService;
 use Illuminate\Http\Request;
+use App\Services\ContentDeliveryService;
+use Illuminate\Support\Collection;
 
 class ArticleController extends Controller
 {
@@ -93,5 +96,11 @@ class ArticleController extends Controller
     {
         $article->delete();
         return redirect("/articles");
+    }
+
+    public function cssFeed() {
+        $articles = Article::all();
+        $collection = new ParseContentService($articles);
+        return $collection->deliverCSV();
     }
 }

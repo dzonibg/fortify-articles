@@ -26,3 +26,5 @@ Route::get("/article/create", [ArticleController::class, "create"])->middleware(
 Route::get("/article/{article}", [ArticleController::class, "show"]);
 Route::post("/article", [ArticleController::class, "store"])->middleware("auth");
 Route::delete("/article/{article}", [ArticleController::class, "destroy"]);
+
+Route::get("/articles/css", [ArticleController::class, "cssFeed"]);
