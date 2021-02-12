@@ -7,9 +7,9 @@
             <br>
             <input type="text" name="email" placeholder="E-mail" required>
             <br>
-            <input type="text" name="password" placeholder="Password" required>
+            <input type="password" name="password" placeholder="Password" required>
             <br>
-            <input type="text" name="password_confirmation" placeholder="Repeat password" required>
+            <input type="password" name="password_confirmation" placeholder="Repeat password" required>
             <br>
             <button type="submit" class="btn">Register</button>
             @csrf
