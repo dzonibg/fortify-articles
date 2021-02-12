@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
-use App\Services\ParseContentService;
+use App\Services\DeliverCsvService;
 use Illuminate\Http\Request;
-use App\Services\ContentDeliveryService;
-use Illuminate\Support\Collection;
+use App\Services\ParseContentService;
 
 class ArticleController extends Controller
 {
@@ -100,7 +99,7 @@ class ArticleController extends Controller
 
     public function cssFeed() {
         $articles = Article::all();
-        $collection = new ParseContentService($articles);
-        return $collection->deliverCSV();
+        $collection = new DeliverCsvService($articles, "Articles.csv");
+        return $collection->deliver();
     }
 }

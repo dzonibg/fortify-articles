@@ -9,8 +9,6 @@ class ParseContentService { //TODO Refactor returns!
     public $content;
     public $columnNames;
     public $file;
-    public $headers;
-    public $fileName = "articles.csv";
     public $csv;
 
     public function __construct(Collection $content)
@@ -23,16 +21,6 @@ class ParseContentService { //TODO Refactor returns!
         $this->columnNames = DB::getSchemaBuilder()->getColumnListing("articles");
         return DB::getSchemaBuilder()->getColumnListing("articles");
 
-    }
-
-    public function setHeaders() {
-        $this->headers = array(
-            "Content-type"        => "text/csv",
-            "Content-Disposition" => "attachment; filename=$this->fileName",
-            "Pragma"              => "no-cache",
-            "Cache-Control"       => "must-revalidate, post-check=0, pre-check=0",
-            "Expires"             => "0"
-        );
     }
 
 
@@ -58,19 +46,8 @@ class ParseContentService { //TODO Refactor returns!
         };
 
         $this->csv = $csv;
+        return $csv;
     }
-
-    public function deliverCSV() {
-        $this->parseCSV();
-        $this->setHeaders();
-
-        return response()->stream($this->csv, 200, $this->headers);
-
-    }
-
-
-
-
 
 
 }
