@@ -7,11 +7,17 @@
     <p> {{$article->body }} </p>
     <p> Written by {{$article->user->name }} on {{ $article->created_at }} </p>
     </div>
+
+        @auth()
+        @if(auth()->user()->id === $article->user->id)
         <form action="/article/{{$article->id}}" method="POST">
             @method("DELETE")
             <input type="hidden" name="id" value="{{$article->id}}">
             @csrf
             <button type="submit" class="btn">Delete</button>
         </form>
+        @endif
+        @endauth
+
     </div>
 @endsection

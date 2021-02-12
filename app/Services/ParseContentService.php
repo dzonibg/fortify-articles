@@ -49,7 +49,8 @@ class ParseContentService { //TODO Refactor!
 
             foreach ($content as $row) {
 
-                fputcsv($file, array($row->id, $row->user->name, $row->title, $row->body, $row->created_at));
+                fputcsv($file, array($row->id, $row->user->name, $row->title, $row->body,
+                    $row->created_at, $row->updated_at));
             }
 
             fclose($file);
@@ -62,6 +63,7 @@ class ParseContentService { //TODO Refactor!
     public function deliverCSV() {
         $this->parseCSV();
         $this->setHeaders();
+
         return response()->stream($this->csv, 200, $this->headers);
 
     }

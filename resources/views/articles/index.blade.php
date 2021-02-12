@@ -17,5 +17,8 @@
     @auth()
         <p><a href="/article/create"> Write a new article.</a></p>
     @endauth
+
+    <p><a href="/articles/css">Export articles to CSV</a></p>
+
 </div>
 @endsection

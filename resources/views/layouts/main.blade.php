@@ -1,3 +1,9 @@
+<HTML>
+<head>
+    <title>Articles</title>
+</head>
+
+<body>
 <link href="{{ asset("style/style.css") }}" rel="stylesheet">
 <div>
     <ul class="menu">
@@ -19,3 +25,5 @@
 </div>
 
 @yield("content")
+</body>
+</HTML>
