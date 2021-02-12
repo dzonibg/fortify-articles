@@ -7,7 +7,7 @@
                 <br>
                 <input type="password" name="password" placeholder="Password" required>
                 <br>
-                <button class="btn" type="submit">Login</button>
+                <button class="btn blue" type="submit">Login</button>
                 @csrf
             </form>
             <ul>

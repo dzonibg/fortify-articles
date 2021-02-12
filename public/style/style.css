@@ -149,3 +149,8 @@ a:visited {
     color: #516881;
     text-underline: none;
 }
+
+button.blue {
+    background-color:darkblue;
+    color: white;
+}

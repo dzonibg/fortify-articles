@@ -11,7 +11,7 @@
             <br>
             <input type="password" name="password_confirmation" placeholder="Repeat password" required>
             <br>
-            <button type="submit" class="btn">Register</button>
+            <button type="submit" class="btn blue">Register</button>
             @csrf
         </form>
         <ul>
